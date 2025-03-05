@@ -1,0 +1,106 @@
+<div style="width: 100%;">
+  <!-- Menú -->
+  <p-menubar [model]="menuItems"
+             styleClass="full-width-menubar">
+    <ng-template pTemplate="start">
+      <strong>Emergencia 2025</strong>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <p-dropdown
+        [options]="departamentos"
+        [(ngModel)]="selectedDepartamento"
+        placeholder="Selecciona un departamento"
+        optionLabel="nombre"
+        styleClass="p-mr-2">
+      </p-dropdown>
+    </ng-template>
+  </p-menubar>
+
+  <h2 style="text-align: center">
+    AVISOS METEOROLÓGICOS
+  </h2>
+
+  <p-tabs value="0"
+          (onChange)="onTabChange($event, 'meteorologico')">
+    <p-tablist>
+      <p-tab value="0">Aviso N° 066</p-tab>
+      <p-tab value="1">Aviso N° 065</p-tab>
+      <p-tab value="2">Aviso N° 064</p-tab>
+      <p-tab value="3">Anteriores</p-tab>
+    </p-tablist>
+    <p-tabpanels>
+      <p-tabpanel value="0">
+        <p>Este aviso indica las regiones donde se registran lluvias moderadas, fuertes y extremas.</p>
+        <p>
+          <strong>Fecha y hora de validez: </strong> <span>2025-03-05 00:10</span>
+        </p>
+        <div id="map-aviso-meteorologic-1"
+             style="height: 30rem"></div>
+      </p-tabpanel>
+      <p-tabpanel value="1">
+        <p>Este aviso indica las regiones donde se registran lluvias moderadas, fuertes y extremas.</p>
+        <p>
+          <strong>Fecha y hora de validez: </strong> <span>2025-03-05 00:10</span>
+        </p>
+        <div id="map-aviso-meteorologic-2"
+             style="height: 30rem"></div>
+      </p-tabpanel>
+      <p-tabpanel value="2">
+        <p>Este aviso indica las regiones donde se registran lluvias moderadas, fuertes y extremas.</p>
+        <p>
+          <strong>Fecha y hora de validez: </strong> <span>2025-03-05 00:10</span>
+        </p>
+        <div id="map-aviso-meteorologic-3"
+             style="height: 30rem"></div>
+      </p-tabpanel>
+      <p-tabpanel value="3">
+        Content III
+      </p-tabpanel>
+    </p-tabpanels>
+  </p-tabs>
+
+  <hr/>
+
+  <h2 style="text-align: center">
+    AVISO DE LLUVIA A MUY CORTO PLAZO NOWCASTING
+  </h2>
+
+  <p-tabs value="0"
+          (onChange)="onTabChange($event, 'nowcasting')">
+    <p-tablist>
+      <p-tab value="0">Tiempo actual</p-tab>
+      <p-tab value="1">Pronóstico a 1 hora</p-tab>
+      <p-tab value="2">Pronóstico a 2 horas</p-tab>
+      <p-tab value="3">Descargas</p-tab>
+    </p-tablist>
+    <p-tabpanels>
+      <p-tabpanel value="0">
+        <p>Este aviso indica las regiones donde se registran lluvias moderadas, fuertes y extremas.</p>
+        <p>
+          <strong>Fecha y hora de validez: </strong> <span>2025-03-05 00:10</span>
+        </p>
+        <div id="map-nowcasting-1"
+             style="height: 30rem"></div>
+      </p-tabpanel>
+      <p-tabpanel value="1">
+        <p>Este aviso indica las regiones donde se registran lluvias moderadas, fuertes y extremas.</p>
+        <p>
+          <strong>Fecha y hora de validez: </strong> <span>2025-03-05 00:10</span>
+        </p>
+        <div id="map-nowcasting-2"
+             style="height: 30rem"></div>
+      </p-tabpanel>
+      <p-tabpanel value="2">
+        <p>Este aviso indica las regiones donde se registran lluvias moderadas, fuertes y extremas.</p>
+        <p>
+          <strong>Fecha y hora de validez: </strong> <span>2025-03-05 00:10</span>
+        </p>
+        <div id="map-nowcasting-3"
+             style="height: 30rem"></div>
+      </p-tabpanel>
+      <p-tabpanel value="3">
+        Content III
+      </p-tabpanel>
+    </p-tabpanels>
+  </p-tabs>
+</div>
